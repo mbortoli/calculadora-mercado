@@ -2,30 +2,18 @@
 <html>
 <head>
   <title>Calculadora Mercado</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th>Preço</th>
-            <th>Quantidade</th>
-            <th>Preço por 100 UD</th>
-          </tr>
-        </thead>
-        <tbody id="productTable">
-        </tbody>
-      </table>
+    <div class="product-list" id="productTable">
     </div>
     <div class="button-container">
       <button onclick="addProductRow()">Adicionar</button>
       <button class="clear" onclick="clearTable()">Limpar</button>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
