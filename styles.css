@@ -32,7 +32,7 @@ body {
 }
 
 .product-item input[type="text"] {
-  flex: 1;
+  flex: 4;
   padding: 6px; /* 6px padding */
   box-sizing: border-box;
   border-radius: 5px;
@@ -74,34 +74,54 @@ button:hover {
   }
 }
 
-
-@media (max-width: 376px) {
-  .column {
-    flex-basis: calc(50% - 20px);
-  }
-  .product-item {
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  background-color: #f2f2f2;
-	  padding: 10px; /* 10px padding */
-	  border-radius: 5px;
-	  position: relative;
-	  gap: 10px; /* Gap between flex items */
-	  flex-shrink: 1;
-	}
-	
-	.product-item input[type="text"] {
-	  min-width: 0;
-	  flex-shrink: 1;
-	  padding: 6px; /* 6px padding */
-	  box-sizing: border-box;
-	  border-radius: 5px;
-	  border: 1px solid #ccc;
-	}
-}
-
 .clear {
   background-color: #dc3545;
   color: white;
+}
+
+/* Flexbox container for the table */
+#productTable {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Gap between rows */
+}
+
+/* Flexbox row for each product item */
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Styling for input fields */
+.product-item input[type="text"] {
+  flex: 1;
+  padding: 6px;
+  margin-right: 10px; /* Spacing between input fields */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the read-only result field */
+.product-item input[type="text"][readonly] {
+  background-color: #ddd; /* Gray background color for read-only field */
+  border: none;
+}
+
+/* Styling for the button */
+.button-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
 }

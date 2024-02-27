@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function calculatePricePer100UD(row) {
-  let priceInput = row.children[1];
-  let quantityInput = row.children[2];
-  let pricePer100UDInput = row.children[3];
+  let priceInput = row.children[0];
+  let quantityInput = row.children[1];
+  let pricePer100UDInput = row.children[2];
   let price = parseFloat(priceInput.value.replace(/[^\d,.]/g, '').replace(',', '.'));
   price = isNaN(price) ? 0 : price.toFixed(2);
   
@@ -24,10 +24,10 @@ function addProductRow() {
   const newRow = document.createElement('div');
   newRow.classList.add('product-item');
   newRow.innerHTML = `
-    <input type="text" placeholder="Produto">
-    <input type="text" pattern="[0-9]*" oninput="formatPriceColumnNumber(event)" placeholder="Preço">
-    <input type="text" pattern="[0-9]*" oninput="calculatePricePer100UD(this.parentElement)" placeholder="Quantidade">
-    <input type="text" pattern="[0-9]*" readonly="readonly" oninput="formatPriceColumnNumber(event)" placeholder="R$ 0,000">
+    <!--input type="text" placeholder="Produto"-->
+    <input class="price" type="text" pattern="[0-9]*" oninput="formatPriceColumnNumber(event)" placeholder="Preço">
+    <input class="quantity" type="text" pattern="[0-9]*" oninput="calculatePricePer100UD(this.parentElement)" placeholder="Quantidade">
+    <input class="result" type="text" pattern="[0-9]*" readonly="readonly" oninput="formatPriceColumnNumber(event)" placeholder="R$ 0,000">
   `;
   table.appendChild(newRow);
 }
