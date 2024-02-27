@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function calculatePricePer100UD(row) {
-	let priceInput = row.children[1];
-	let quantityInput = row.children[2];
-	let pricePer100UDInput = row.children[3];
+  let priceInput = row.children[1];
+  let quantityInput = row.children[2];
+  let pricePer100UDInput = row.children[3];
   let price = parseFloat(priceInput.value.replace(/[^\d,.]/g, '').replace(',', '.'));
   price = isNaN(price) ? 0 : price.toFixed(2);
   
