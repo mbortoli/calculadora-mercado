@@ -4,45 +4,16 @@ body {
   padding: 0;
   background-color: #f8f9fa;
 }
-
-.container {
-  max-width: 800px;
-  margin: 20px auto; /* 20px margin on the top and bottom */
-  padding: 20px; /* 20px padding */
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.product-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Gap between flex items */
-}
-
-.product-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f2f2f2;
-  padding: 10px; /* 10px padding */
-  border-radius: 5px;
-  position: relative;
-  gap: 10px; /* Gap between flex items */
-}
-
-.product-item input[type="text"] {
-  flex: 4;
-  padding: 6px; /* 6px padding */
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
 .button-container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px; /* 20px margin on the top */
+  padding-top: 15px;
+}
+
+.button-container button {
+	
+  
+  
+
 }
 
 button {
@@ -63,10 +34,16 @@ button:hover {
   background-color: #0056b3;
 }
 
+
+
+
+
 @media (min-width: 601px) {
   /* Desktop styles */
-  .product-item {
-    transition: transform 0.3s;
+  .product-item input[type="text"] {
+    flex: 0 0 calc(50% - 10px);
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .product-item.swipe-delete {
@@ -98,6 +75,7 @@ button:hover {
 
 /* Styling for input fields */
 .product-item input[type="text"] {
+	min-width: 0;
   flex: 1;
   padding: 6px;
   margin-right: 10px; /* Spacing between input fields */
@@ -111,17 +89,4 @@ button:hover {
   border: none;
 }
 
-/* Styling for the button */
-.button-container button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
 
-.button-container button:hover {
-  background-color: #0056b3;
-}
