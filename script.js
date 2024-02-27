@@ -15,7 +15,7 @@ function calculatePricePer100UD(row) {
   
   if (!isNaN(price) && !isNaN(quantity) && quantity > 0) {
     const pricePer100UD = (price * 100 / quantity).toFixed(3).replace('.', ',');
-    pricePer100UDInput.value = 'R$ ' + pricePer100UD;
+    pricePer100UDInput.value = 'R$ ' + pricePer100UD + ' /100 UD';
   }
 }
 
@@ -27,7 +27,7 @@ function addProductRow() {
     <!--input type="text" placeholder="Produto"-->
     <input class="price" type="text" pattern="[0-9]*" oninput="formatPriceColumnNumber(event)" placeholder="Preço">
     <input class="quantity" type="text" pattern="[0-9]*" oninput="calculatePricePer100UD(this.parentElement)" placeholder="Quantidade">
-    <input class="result" type="text" pattern="[0-9]*" readonly="readonly" oninput="formatPriceColumnNumber(event)" placeholder="R$ 0,000">
+    <input class="result" type="text" pattern="[0-9]*" readonly="readonly" oninput="formatPriceColumnNumber(event)" placeholder="R$ 0,000 /100 UD">
   `;
   table.appendChild(newRow);
 }
