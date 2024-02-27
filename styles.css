@@ -9,12 +9,6 @@ body {
   padding-top: 15px;
 }
 
-.button-container button {
-	
-  
-  
-
-}
 
 button {
   padding: 10px 20px; /* 10px top/bottom padding, 20px left/right padding */
@@ -44,6 +38,7 @@ button:hover {
     flex: 0 0 calc(50% - 10px);
     margin-right: 0;
     margin-bottom: 10px;
+	font-size: 16px; /* Set a specific font size to prevent zooming */
   }
 
   .product-item.swipe-delete {
@@ -75,7 +70,7 @@ button:hover {
 
 /* Styling for input fields */
 .product-item input[type="text"] {
-	min-width: 0;
+  min-width: 0;
   flex: 1;
   padding: 6px;
   margin-right: 10px; /* Spacing between input fields */
