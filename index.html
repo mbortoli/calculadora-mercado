@@ -17,6 +17,15 @@
     </div>
   </div>
 
+  <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register (
+          '/calculadora-mercado/sw.js',
+          {scope: '/calculadora-mercado/'}
+        )
+      }
+  </script>
   <script src="script.js"></script>
+  
 </body>
 </html>
