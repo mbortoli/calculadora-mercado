@@ -1,0 +1,13 @@
+{
+  "name": "Calculadora de Mercado",
+  "short_name": "Calc Mercado",
+  "description": "Caculadora de mercado para saber qual o item vale mais a pena comprar",
+  "scope": "/calculadora-mercado/",
+  "start_url": "/calculadora-mercado/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone", 
+  "icons": [
+      
+  ]
+}
