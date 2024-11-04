@@ -1,6 +1,6 @@
 {
   "name": "Calculadora de Mercado",
-  "short_name": "Calc Mercado",
+  "short_name": "CM",
   "description": "Caculadora de mercado para saber qual o item vale mais a pena comprar",
   "scope": "/calculadora-mercado/",
   "start_url": "/calculadora-mercado/",
